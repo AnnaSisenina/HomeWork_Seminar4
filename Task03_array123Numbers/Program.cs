@@ -22,15 +22,21 @@ int inputNumber = int.Parse(Console.ReadLine()!);
 return inputNumber;
 }
 
-int length = ReadInt("Введите длину массива: ");
+int length = 123;
 int rangeFrom= ReadInt("Введите начало диапазона чисел: ");
 int rangeTo = ReadInt("Введите конец диапазона чисел: ");
 int [] array = CreateArray(length, rangeFrom, rangeTo);
 int count=0;
 PrintArray(array);
+Console.WriteLine ("Элементы из отрезка [10,99] в массиве:");
 
 for (int i=0; i<array.Length; i++)
-if (array[i]>=10 && array [i]<=99) count++;
+if (array[i]>=10 && array [i]<=99)
+{
+    count++;
+    Console.Write(array[i]+"\t");
+}
+Console.WriteLine();    
 Console.WriteLine($"Количество элементов из отрезка [10,99] в массиве - {count}");
 
 

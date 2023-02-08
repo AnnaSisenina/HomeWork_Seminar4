@@ -14,12 +14,10 @@ void PrintArray(int [] array)
     Console.WriteLine();
 }
 
-Console.WriteLine("Введите длину массива: ");
-int length = int.Parse(Console.ReadLine()!);
-Console.WriteLine("Введите начало диапазона чисел: ");
-int rangeFrom= int.Parse(Console.ReadLine()!);
-Console.WriteLine("Введите конец диапазона чисел: ");
-int rangeTo = int.Parse(Console.ReadLine()!);
+int length = 8;
+int rangeFrom= 0;
+int rangeTo = 1;
 int [] array = CreateArray(length, rangeFrom, rangeTo);
-PrintArray(array);
 
+Console.WriteLine ("Массив из 8 элементов, заполненный 0 и 1:");
+PrintArray(array);
